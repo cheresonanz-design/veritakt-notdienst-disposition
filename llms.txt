@@ -1,0 +1,6 @@
+# MarginProof Dispatch (by VeriTakt Collective)
+> Strukturierte 24/7 Notfall-Triage für SHK, Elektro & Zahnarztpraxen plus transparente Notdienst-Deckungsbeitragskalkulation.
+
+- App: https://cheresonanz-design.github.io/veritakt-notdienst-disposition/
+- Offers: https://cheresonanz-design.github.io/veritakt-notdienst-disposition/pro/
+- Legal: https://cheresonanz-design.github.io/veritakt-notdienst-disposition/legal/

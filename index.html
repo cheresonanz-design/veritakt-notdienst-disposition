@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarginProof Dispatch — KI-Notdienst-Disposition &amp; Einsatz-Margen-OS (Handwerk &amp; Praxen)</title>
+  <meta name="description" content="Strukturierte 24/7 Notfall-Triage für SHK, Elektro &amp; Zahnarztpraxen plus transparente Notdienst-Deckungsbeitragskalkulation." />
+  <link rel="canonical" href="https://cheresonanz-design.github.io/veritakt-notdienst-disposition/" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MarginProof Dispatch", "applicationCategory": "BusinessApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "url": "https://cheresonanz-design.github.io/veritakt-notdienst-disposition/"}</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand-mark" href="index.html"><span>MarginProof Dispatch</span><span class="brand-badge">SHK · ELEKTRO · NOTDIENST</span></a>
+      <nav class="nav-links" aria-label="Hauptnavigation"><a href="index.html" class="active">Notdienst &amp; Marge</a>
+<a href="notfall-triage-matrix/" class="">Notfall-Triage</a>
+<a href="einsatz-marge-rechner/" class="">Einsatz-Marge</a>
+<a href="leitfaden-export/" class="">Leitfaden Export</a>
+<a href="pro/" class="">Kit &amp; Rollout</a>
+<a href="legal/" class="">Impressum</a><a href="pro/" class="nav-cta">49 EUR Kit</a></nav>
+    </div>
+  </header>
+  
+  <section class="hero"><div class="container"><h1>Notdienst-Disposition &amp; Einsatz-Margen-OS (100 % lokal)</h1><p>Qualifizieren Sie echte P1-Notfälle (Rohrbruch, Stromausfall, Schmerzpatient), vermeiden Sie Verlustfahrten und generieren Sie klare Einsatz-Leitfäden.</p></div></section>
+  <main class="container">
+    <div class="card">
+      <div class="btn-row" style="margin-top:0;margin-bottom:14px;">
+        <button type="button" class="btn" id="sample1Btn">Demo: Samstagabend SHK/Elektro (3 Einsätze)</button>
+        <button type="button" class="btn" id="sample2Btn">Demo: Sauber disponierte P1-Schicht</button>
+        <button type="button" class="btn" id="sample3Btn">Demo: Praxis-Schmerzpatienten Triage</button>
+      </div>
+      <div class="form-grid">
+        <div><label for="profileInput">Betrieb / Einsatz-Team</label><input type="text" id="profileInput" /></div>
+        <div><label for="modeSelect">Gewerk / Fokus</label><select id="modeSelect"><option value="shk_elektro">SHK &amp; Elektro-Handwerk</option><option value="zahnarzt">Zahnarzt / Praxis-Notdienst</option><option value="marge">Reine Einsatz-Margenkalkulation</option></select></div>
+        <div><label for="toneSelect">Anrufer-Ansage</label><select id="toneSelect"><option value="executive">Beruhigend &amp; Transparent (inkl. Zuschlag-Info)</option><option value="streng">Klare P1-Triage &amp; Storno-Schutz</option></select></div>
+      </div>
+      <div class="btn-row"><button type="button" class="btn btn-primary" id="runCheckBtn">Disposition &amp; Marge prüfen</button></div>
+    </div>
+
+    <div id="resultCard" class="card hidden">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
+        <h2 id="resultHeadline" style="margin:0;">Ergebnis</h2>
+        <div class="btn-row" style="margin:0;">
+          <button type="button" class="btn btn-primary" id="copyActionBtn">Maßnahmentext kopieren</button>
+          <button type="button" class="btn" id="dlCsvBtn">CSV Export (.csv)</button>
+          <button type="button" class="btn" id="dlJsonBtn">JSON Audit (.json)</button>
+        </div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-box"><div class="kpi-label">Triage-Treffsicherheit</div><div class="kpi-val" id="kpi1Val">-</div></div>
+        <div class="kpi-box"><div class="kpi-label">P1-Fälle / Risiko-Calls</div><div class="kpi-val" id="kpi2Val">-</div></div>
+        <div class="kpi-box"><div class="kpi-label">Deckungsbeitrag / Schicht</div><div class="kpi-val" id="kpi3Val">-</div></div>
+        <div class="kpi-box"><div class="kpi-label">Jahres-Zusatzmarge</div><div class="kpi-val" id="kpi4Val">-</div></div>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>ID</th><th>Position &amp; Kategorie</th><th>Kennzahl</th><th>Effekt</th><th>Status</th><th>Prüfhinweis</th></tr></thead><tbody id="entriesBody"></tbody></table></div>
+      <h3>Bereiter Dispositions- &amp; Rückruf-Leitfaden</h3>
+      <textarea id="actionBox" readonly aria-label="Maßnahmentext"></textarea>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="offer-card highlight"><div><span class="badge badge-pass">MP-DISP-01 · 49 EUR</span><h3>MarginProof Complete Operations &amp; Notdienst Bundle</h3><div class="offer-price">49 EUR</div><p class="muted">Stundensatz-, Notdienst- &amp; Retainer-Kalkulator (Excel-Suite + PDFs), sofort über unseren Live MarginProof Payhip Checkout.</p></div><div class="btn-row"><a href="https://payhip.com/b/RHu6N" class="btn btn-primary">49 EUR Kit bestellen</a><a href="pro/" class="btn">Details</a></div></div>
+      <div class="offer-card"><div><span class="badge badge-warn">MP-DISP-ROLLOUT · 3500 EUR</span><h3>MarginProof Core Margin &amp; Dispatch Rollout</h3><div class="offer-price">3500 EUR</div><p class="muted">Einrichtung von Notfall-Triage-Regeln, Bereitschafts-Preiskalkulation &amp; Voice/Intake-Workflow für Ihren Betrieb.</p></div><div class="btn-row"><a href="https://buy.stripe.com/fZu6oAfQReQu7Hy0IN24003" class="btn btn-dark">3500 EUR Rollout buchen</a><a href="pro/" class="btn">Umfang</a></div></div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p><strong>MarginProof Dispatch</strong> — Strukturierte 24/7 Notfall-Triage für SHK, Elektro &amp; Zahnarztpraxen plus transparente Notdienst-Deckungsbeitragskalkulation.</p>
+      <p>Che Goncalves Menendez · MarginProof · by VeriTakt Collective (Gewerbe: ImportKlar) · Liegnitzstr. 53A, 28237 Bremen, Deutschland · Umsatzsteuerbefreit gemäß § 19 UStG (Kleinunternehmerregelung)</p>
+      <p><a href="legal/">Impressum &amp; DSGVO</a> · <a href="pro/">49 EUR Kit &amp; 3500 EUR Rollout</a> · <a href="https://cheresonanz-design.github.io/opskanon-directory/" target="_blank" rel="noopener">Gelistet auf OpsKanon</a></p>
+    </div>
+  </footer>
+  <script src="assets/notdienst_dispatch_engine.js"></script><script src="assets/app.js"></script>
+</body>
+</html>
