@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MarginProof Dispatch — KI-Notdienst-Disposition &amp; Einsatz-Margen-OS (Handwerk &amp; Praxen)</title>
-  <meta name="description" content="Strukturierte 24/7 Notfall-Triage für SHK, Elektro &amp; Zahnarztpraxen plus transparente Notdienst-Deckungsbeitragskalkulation." />
+  <title>MarginProof Dispatch — Notdienst-Triage &amp; Einsatz-Margen-Prototyp (Handwerk &amp; Praxen)</title>
+  <meta name="description" content="Strukturierte Notfall-Triage für SHK, Elektro &amp; Zahnarztpraxen plus Einsatz-Deckungsbeitragskalkulation im Browser." />
   <link rel="canonical" href="https://cheresonanz-design.github.io/veritakt-notdienst-disposition/" />
   <link rel="stylesheet" href="assets/styles.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MarginProof Dispatch", "applicationCategory": "BusinessApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "url": "https://cheresonanz-design.github.io/veritakt-notdienst-disposition/"}</script>
@@ -12,17 +12,17 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand-mark" href="index.html"><span>MarginProof Dispatch</span><span class="brand-badge">SHK · ELEKTRO · NOTDIENST</span></a>
+      <a class="brand-mark" href="index.html"><span>MarginProof Dispatch</span><span class="brand-badge">PRAXIS-PROTOTYP · 0 EUR</span></a>
       <nav class="nav-links" aria-label="Hauptnavigation"><a href="index.html" class="active">Notdienst &amp; Marge</a>
 <a href="notfall-triage-matrix/" class="">Notfall-Triage</a>
 <a href="einsatz-marge-rechner/" class="">Einsatz-Marge</a>
 <a href="leitfaden-export/" class="">Leitfaden Export</a>
-<a href="pro/" class="">Kit &amp; Rollout</a>
-<a href="legal/" class="">Impressum</a><a href="pro/" class="nav-cta">49 EUR Kit</a></nav>
+<a href="pro/" class="">Prototyp &amp; Pilot</a>
+<a href="legal/" class="">Impressum</a><a href="pro/" class="nav-cta">Pilot-Anfrage</a></nav>
     </div>
   </header>
   
-  <section class="hero"><div class="container"><h1>Notdienst-Disposition &amp; Einsatz-Margen-OS (100 % lokal)</h1><p>Qualifizieren Sie echte P1-Notfälle (Rohrbruch, Stromausfall, Schmerzpatient), vermeiden Sie Verlustfahrten und generieren Sie klare Einsatz-Leitfäden.</p></div></section>
+  <section class="hero"><div class="container"><span class="brand-badge" style="margin-bottom:8px;display:inline-block;">PRAXIS-PROTOTYP · 0 EUR · KEIN PAYHIP-PRODUKT</span><h1>Notdienst-Disposition &amp; Einsatz-Margen-Check (100 % lokal)</h1><p>Qualifizieren Sie P1-Notfälle (Rohrbruch, Stromausfall, Schmerzpatient), vermeiden Sie Verlustfahrten und erzeugen Sie Einsatz-Leitfäden.</p></div></section>
   <main class="container">
     <div class="card">
       <div class="btn-row" style="margin-top:0;margin-bottom:14px;">
@@ -35,29 +35,7 @@
         <div><label for="modeSelect">Gewerk / Fokus</label><select id="modeSelect"><option value="shk_elektro">SHK &amp; Elektro-Handwerk</option><option value="zahnarzt">Zahnarzt / Praxis-Notdienst</option><option value="marge">Reine Einsatz-Margenkalkulation</option></select></div>
         <div><label for="toneSelect">Anrufer-Ansage</label><select id="toneSelect"><option value="executive">Beruhigend &amp; Transparent (inkl. Zuschlag-Info)</option><option value="streng">Klare P1-Triage &amp; Storno-Schutz</option></select></div>
       </div>
-      <div class="divider-top">
-        <div style="font-size:0.86rem;font-weight:700;margin-bottom:8px;">Eigene Position hinzufügen (100 % lokal im Browser)</div>
-        <div class="inline-grid">
-          <div><label for="posIdInput">Pos-ID</label><input type="text" id="posIdInput" placeholder="z. B. POS-04" /></div>
-          <div><label for="posLabelInput">Bezeichnung / Position</label><input type="text" id="posLabelInput" placeholder="Eigene Position eingeben..." /></div>
-          <div><label for="posCategoryInput">Kategorie</label><input type="text" id="posCategoryInput" placeholder="z. B. Prüfung / Risiko" /></div>
-          <div><label for="posMetricInput">Kennzahl</label><input type="number" id="posMetricInput" step="0.01" value="80" /></div>
-          <div><label for="posImpactInput">Effekt (EUR)</label><input type="number" id="posImpactInput" step="0.01" value="0" /></div>
-          <div><label for="posStatusSelect">Status</label><select id="posStatusSelect"><option value="AUTO">Automatik</option><option value="PASS">PASS</option><option value="WARN">WARN</option><option value="FAIL">FAIL</option></select></div>
-          <div><label for="posNoteInput">Prüfhinweis</label><input type="text" id="posNoteInput" placeholder="Kurzer Hinweis oder Maßnahme" /></div>
-        </div>
-        <div class="btn-row">
-          <button type="button" class="btn btn-primary" id="runCheckBtn">Disposition &amp; Marge prüfen</button>
-          <button type="button" class="btn" id="addItemBtn">+ Position hinzufügen</button>
-          <button type="button" class="btn" id="clearItemsBtn">Positionen leeren</button>
-        </div>
-        <details style="margin-top:12px;">
-          <summary style="cursor:pointer;font-size:0.86rem;font-weight:700;color:var(--slate-500);">CSV / Semikolon-Stapelimport &amp; Direktbearbeitung</summary>
-          <p class="muted" style="margin:6px 0 8px;">Format: <code>ID;Kategorie;Position;Kennzahl;Effekt_EUR;Status;Hinweis</code> (Semikolon oder Komma, lokal im Browser verarbeitet).</p>
-          <textarea id="batchCsvInput" aria-label="CSV Stapelimport"></textarea>
-          <div class="btn-row"><button type="button" class="btn" id="applyCsvBtn">CSV übernehmen &amp; prüfen</button></div>
-        </details>
-      </div>
+      <div class="btn-row"><button type="button" class="btn btn-primary" id="runCheckBtn">Disposition &amp; Marge prüfen</button></div>
     </div>
 
     <div id="resultCard" class="card hidden">
@@ -75,22 +53,21 @@
         <div class="kpi-box"><div class="kpi-label">Deckungsbeitrag / Schicht</div><div class="kpi-val" id="kpi3Val">-</div></div>
         <div class="kpi-box"><div class="kpi-label">Jahres-Zusatzmarge</div><div class="kpi-val" id="kpi4Val">-</div></div>
       </div>
-      <div class="table-wrap"><table><thead><tr><th>ID</th><th>Position &amp; Kategorie</th><th>Kennzahl</th><th>Effekt</th><th>Status</th><th>Prüfhinweis</th><th>Aktion</th></tr></thead><tbody id="entriesBody"></tbody></table></div>
+      <div class="table-wrap"><table><thead><tr><th>ID</th><th>Position &amp; Kategorie</th><th>Kennzahl</th><th>Effekt</th><th>Status</th><th>Prüfhinweis</th></tr></thead><tbody id="entriesBody"></tbody></table></div>
       <h3>Bereiter Dispositions- &amp; Rückruf-Leitfaden</h3>
       <textarea id="actionBox" readonly aria-label="Maßnahmentext"></textarea>
     </div>
 
     <div class="pricing-grid">
-      <div class="offer-card highlight"><div><span class="badge badge-pass">MP-DISP-01 · 49 EUR</span><h3>MarginProof Complete Operations &amp; Notdienst Bundle</h3><div class="offer-price">49 EUR</div><p class="muted">Stundensatz-, Notdienst- &amp; Retainer-Kalkulator (Excel-Suite + PDFs), sofort über unseren Live MarginProof Payhip Checkout.</p></div><div class="btn-row"><a href="mailto:che.resonanz@gmail.com?subject=Bestellung%20MarginProof%20Complete%20Operations%20%26%20Notdienst%20Bundle%20%2849%20EUR%29" class="btn btn-primary">49 EUR Kit bestellen</a><a href="pro/" class="btn">Details</a></div></div>
-      <div class="offer-card"><div><span class="badge badge-warn">MP-DISP-ROLLOUT · 3500 EUR</span><h3>MarginProof Core Margin &amp; Dispatch Rollout</h3><div class="offer-price">3500 EUR</div><p class="muted">Einrichtung von Notfall-Triage-Regeln, Bereitschafts-Preiskalkulation &amp; Voice/Intake-Workflow für Ihren Betrieb.</p></div><div class="btn-row"><a href="mailto:che.resonanz@gmail.com?subject=Anfrage%20MarginProof%20Core%20Margin%20%26%20Dispatch%20Rollout%20%283500%20EUR%29" class="btn btn-dark">3500 EUR Rollout buchen</a><a href="pro/" class="btn">Umfang</a></div></div>
+      <div class="offer-card highlight"><div><span class="badge badge-pass">0 EUR PROTOTYP · LOKAL</span><h3>Kostenloser Browser-Prototyp</h3><div class="offer-price">0 EUR</div><p class="muted">Demo-Szenarien lokal testen, kein Payhip-Produkt, kein Cloud-Upload und keine automatische Bezahlfunktion.</p></div><div class="btn-row"><a href="#top" class="btn btn-primary">Jetzt im Browser testen</a><a href="pro/" class="btn">Status &amp; Hinweise</a></div></div>
+      <div class="offer-card"><div><span class="badge badge-warn">INDIVIDUELLE ANFRAGE · B2B</span><h3>Individuelles B2B-Pilotprojekt auf Anfrage</h3><div class="offer-price">Auf Anfrage</div><p class="muted">Unverbindliche Vorabanfrage per E-Mail an che.resonanz@gmail.com zur Anpassung an Ihren Anwendungsfall (§ 19 UStG).</p></div><div class="btn-row"><a href="mailto:che.resonanz@gmail.com?subject=Unverbindliche%20B2B-Pilotanfrage%3A%20MarginProof%20Dispatch" class="btn btn-dark">Pilot-Anfrage per E-Mail</a><a href="pro/" class="btn">Details</a></div></div>
     </div>
   </main>
   <footer class="footer">
     <div class="container">
-      <p><strong>MarginProof Dispatch</strong> — Strukturierte 24/7 Notfall-Triage für SHK, Elektro &amp; Zahnarztpraxen plus transparente Notdienst-Deckungsbeitragskalkulation.</p>
+      <p><strong>MarginProof Dispatch (Interaktiver Praxis-Prototyp · 0 EUR)</strong> — Strukturierte Notfall-Triage für SHK, Elektro &amp; Zahnarztpraxen plus Einsatz-Deckungsbeitragskalkulation im Browser.</p>
       <p>Che Goncalves Menendez · MarginProof · by VeriTakt Collective (Gewerbe: ImportKlar) · Liegnitzstr. 53A, 28237 Bremen, Deutschland · Umsatzsteuerbefreit gemäß § 19 UStG (Kleinunternehmerregelung)</p>
-      <p>Hinweis: Orientierungshilfe mit Beispieldaten, keine Rechts-, Steuer-, Medizin- oder Versicherungsberatung und keine Garantie auf Richtigkeit. Bestellungen und Anfragen bearbeite ich persönlich per E-Mail.</p>
-      <p><a href="legal/">Impressum &amp; DSGVO</a> · <a href="pro/">49 EUR Kit &amp; 3500 EUR Rollout</a> · <a href="https://cheresonanz-design.github.io/opskanon-directory/" target="_blank" rel="noopener">Gelistet auf OpsKanon</a></p>
+      <p><a href="legal/">Impressum &amp; DSGVO</a> · <a href="pro/">Pilot-Anfrage (E-Mail)</a> · <a href="https://cheresonanz-design.github.io/opskanon-directory/" target="_blank" rel="noopener">Gelistet auf OpsKanon</a></p>
     </div>
   </footer>
   <script src="assets/notdienst_dispatch_engine.js"></script><script src="assets/app.js"></script>
